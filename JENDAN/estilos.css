@@ -1,0 +1,464 @@
+
+/* =========================================
+   1. PALETA DE COLORES
+========================================= */
+
+:root {
+    --color-principal: #728E6D;
+    --color-secundario: #AC7153;
+    --color-acento: #CA954B;
+    --color-fondo: #FDDFAC;
+    --color-texto: #F8F8F8;
+}
+
+
+/* =========================================
+   2. CONFIGURACIÓN GENERAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html, body {
+    width: 100%;
+    min-height: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--color-fondo);
+    color: #333333;
+}
+
+
+/* =========================================
+   3. ENCABEZADO
+========================================= */
+
+header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    background: var(--color-principal);
+    padding: 10px 20px;
+}
+
+
+/* LOGO */
+
+.logo {
+    width: 110px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    width: 85px;
+    height: 75px;
+    object-fit: contain;
+}
+
+
+/* TÍTULO Y BUSCADOR */
+
+.titulo {
+    flex: 1;
+    text-align: center;
+    padding: 15px;
+    color: var(--color-fondo);
+    text-shadow: 2px 2px 3px #333333;
+}
+
+
+.titulo h1 {
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+.titulo input {
+    width: 40%;
+    height: 30px;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 15px;
+    background: var(--color-acento);
+    color: white;
+    outline: none;
+}
+
+.titulo input::placeholder {
+    color: white;
+    opacity: 1;
+}
+
+
+/* =========================================
+   4. CONTENIDO PRINCIPAL
+   MENÚ Y LIBRO DESTACADO
+========================================= */
+
+.contenido {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-top: 25px;
+    padding: 15px 10px;
+}
+
+
+/* =========================================
+   5. MENÚ LATERAL
+========================================= */
+
+aside {
+    width: 150px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding-top: 0;
+}
+
+aside a {
+    padding: 13px 8px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--color-texto);
+    background: var(--color-acento);
+    font-size: 12px;
+    border-radius: 20px;
+}
+
+aside a:hover {
+    background: var(--color-secundario);
+}
+
+
+/* =========================================
+   6. SECCIÓN CENTRAL
+========================================= */
+
+main {
+    flex: 1;
+    min-width: 0;
+}
+
+
+/* =========================================
+   7. LIBRO DESTACADO
+========================================= */
+
+.destacado {
+    width: 100%;
+    min-height: 230px;
+    background: var(--color-acento);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 35px;
+}
+
+
+/* DESCRIPCIÓN */
+
+.descripcion {
+    text-align: center;
+    flex: 1;
+    padding: 15px;
+}
+
+.descripcion h2 {
+    font-size: 27px;
+    margin-bottom: 20px;
+    color: var(--color-secundario);
+}
+
+.descripcion h3 {
+    color: var(--color-texto);
+    font-size: 22px;
+}
+
+
+/* PORTADA */
+
+.portada {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.portada img {
+    width: 130px;
+    height: 180px;
+    object-fit: cover;
+}
+
+
+/* =========================================
+   8. SECCIÓN DE LIBROS MÁS BUSCADOS
+========================================= */
+
+.seccion-catalogo {
+    width: 100%;
+    padding: 15px 10px;
+    margin-top: 10px;
+}
+
+
+/* SUBTÍTULO */
+
+.subtitulo {
+    width: 100%;
+    text-align: center;
+    padding: 18px;
+    margin-bottom: 0;
+    color: white;
+    background: var(--color-principal);
+    font-size: 22px;
+    letter-spacing: 2px;
+}
+
+
+/* =========================================
+   9. CATÁLOGO DE LIBROS
+========================================= */
+
+.libros {
+    width: 100%;
+    padding: 25px;
+    margin-bottom: 25px;
+    background: var(--color-fondo);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+
+/* =========================================
+   10. TARJETAS DE LIBROS
+========================================= */
+
+.libro {
+    padding: 18px;
+    text-align: center;
+    background: white;
+    border-radius: 8px;
+}
+
+
+/* IMÁGENES */
+
+.libro img {
+    width: 100%;
+    height: 170px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+
+/* NOMBRES */
+
+.libro h3 {
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: var(--color-secundario);
+}
+
+
+/* BOTONES */
+
+.libro button {
+    border: none;
+    background: var(--color-principal);
+    color: var(--color-texto);
+    padding: 10px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.libro button:hover {
+    background: var(--color-acento);
+}
+
+
+/* =========================================
+   11. PIE DE PÁGINA
+========================================= */
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 20px;
+    background: var(--color-principal);
+    color: var(--color-texto);
+}
+
+footer h2 {
+    font-size: 24px;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+    color: var(--color-fondo);
+    text-shadow: 2px 2px 3px #333333;
+}
+
+footer p {
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: var(--color-texto);
+}
+
+
+/* =========================================
+   12. ADAPTACIÓN A TABLETAS
+========================================= */
+
+@media (max-width: 900px) {
+
+    /* CATÁLOGO */
+
+    .libros {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    /* MENÚ */
+
+    aside {
+        width: 130px;
+    }
+
+    /* DESCRIPCIÓN */
+
+    .descripcion h2 {
+        font-size: 22px;
+    }
+
+}
+
+
+/* =========================================
+   13. ADAPTACIÓN A CELULARES
+========================================= */
+
+@media (max-width: 600px) {
+
+    /* ENCABEZADO */
+
+    header {
+        height: auto;
+        min-height: 90px;
+        padding: 8px;
+    }
+
+    /* LOGO */
+
+    .logo {
+        width: 65px;
+        height: 65px;
+    }
+
+    .logo img {
+        width: 58px;
+        height: 58px;
+    }
+
+    /* TÍTULO Y BUSCADOR */
+
+    .titulo h1 {
+        font-size: 19px;
+    }
+
+    .titulo input {
+        width: 90%;
+    }
+
+    /* CONTENIDO */
+
+    .contenido {
+        flex-direction: column;
+        padding: 10px 5px;
+    }
+
+    /* MENÚ LATERAL */
+
+    aside {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-top: 10px;
+        gap: 8px;
+    }
+
+    aside a {
+        flex: 1 1 100px;
+        font-size: 10px;
+    }
+
+    /* LIBRO DESTACADO */
+
+    main {
+        width: 100%;
+    }
+
+    .destacado {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .descripcion h2 {
+        font-size: 21px;
+    }
+
+    .descripcion h3 {
+        font-size: 17px;
+    }
+
+    /* SECCIÓN DE LIBROS */
+
+    .seccion-catalogo {
+        padding: 10px 5px;
+        margin-top: 10px;
+    }
+
+    .subtitulo {
+        font-size: 18px;
+        padding: 15px;
+    }
+
+    /* CATÁLOGO */
+
+    .libros {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        padding: 12px;
+    }
+
+    /* TARJETAS */
+
+    .libro {
+        padding: 10px;
+    }
+
+    .libro img {
+        height: 130px;
+    }
+
+    .libro h3 {
+        font-size: 11px;
+    }
+
+}
